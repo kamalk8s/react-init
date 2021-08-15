@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Button, Container } from '@material-ui/core';
+import SpacingGrid from './components/grid'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends Component {
+    render() {
+        return (
+            <div>
+                <Container maxWidth='xl'>
+                    <h1>Hello World</h1>
+                <Button color="primary">Hello World</Button>
+                <Button color="secondary">Hello World</Button>
+                <Button variant="contained">Default</Button>
+                <Button variant="contained" color="primary">
+                    Primary
+                </Button>
+                <Button variant="contained" color="secondary">
+                    Secondary
+                </Button>
+                <Button variant="contained" disabled>
+                    Disabled
+                </Button>
+                <Button variant="contained" color="primary" href="#contained-buttons">
+                    Link
+                </Button>
+                <SpacingGrid></SpacingGrid>
+                </Container>
+            </div>
+        )
+    }
 }
 
-export default App;
+export default App
