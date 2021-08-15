@@ -1,29 +1,21 @@
 import React, { Component } from 'react';
 import { Button, Container } from '@material-ui/core';
-import SpacingGrid from './components/grid'
+import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
 
 export class App extends Component {
     render() {
         return (
             <div>
                 <Container maxWidth='xl'>
-                    <h1>Hello World</h1>
-                <Button color="primary">Hello World</Button>
-                <Button color="secondary">Hello World</Button>
-                <Button variant="contained">Default</Button>
-                <Button variant="contained" color="primary">
-                    Primary
-                </Button>
-                <Button variant="contained" color="secondary">
-                    Secondary
-                </Button>
-                <Button variant="contained" disabled>
-                    Disabled
-                </Button>
-                <Button variant="contained" color="primary" href="#contained-buttons">
-                    Link
-                </Button>
-                <SpacingGrid></SpacingGrid>
+                    <Grid container spacing={1}>
+                        <Grid item xs={2}>
+                            <TextField id="filled-basic" label="Filled" variant="filled" />
+                        </Grid>
+                        <Grid item xs={2}>
+                            <Button variant="contained" color="primary">Submit</Button>
+                        </Grid>
+                    </Grid>
                 </Container>
             </div>
         )
